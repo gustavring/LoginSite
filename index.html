@@ -18,22 +18,37 @@
             <input type="checkbox" id="togglePassword">
             Visa <!-- för att kunna visa vad man skrivit i password -->
         </label>
+<!--         <label class="container">
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+            visa
+        </label> -->
 
 
         <button id="loginBtn" type="submit">Logga in</button>
+
+        <img id="meny" src="profile.png" alt="menyProfileImg">
     </div>
 
     <div id="success" style="display: none;"> <!-- Välkomssidan -->
         <h1>Välkommen</h1>
         <p>Inloggningen lyckades!</p>
         <button id="logoutBtn">Logga ut</button> <!-- logga ut knapp när man lyckats logga in -->
+
+        <img id="welcome" src="welcome.png" alt="successSiteImg" srcset="">
     </div>
 
     <div id="fail" style="display: none;"> <!-- vid fel inmatning hamnar man här -->
         <h1>OBS!</h1>
-        <p>Fel användarnamn och/eller lösenord</p>
-        <button id="tryAgainBtn">Försök igen</button> <!-- laddar om sidan vid click och visar menyn igen -->
+        <div class="container123">
+            <p>Fel användarnamn och/eller lösenord  <!-- laddar om sidan vid click och visar menyn igen --> </p>
+            <button id="tryAgainBtn">Försök igen</button>
+        </div>
+        
+
+        <img id="obs" src="obs.png" alt="failSiteImg">
     </div>
+
     
 </body>
 </html>
