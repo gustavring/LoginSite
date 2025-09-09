@@ -36,7 +36,45 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(failView);
     console.log(logoutBtn);
     console.log(togglePassword);
+
     
-    
+
+    loginBtn.addEventListener("click", () => {
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value;
+        
+        //om username/password correct visa success
+        if (username === correctUsername && password === correctPassword) {
+            //visa success och göm login/fail
+            loginView.style.display = "none";
+            failView.style.display = "none";
+            successView.style.display = "block";
+
+        } else {
+            //visa fail och göm login/success
+            loginView.style.display = "none";
+            successView.style.display = "none";
+            failView.style.display = "block";
+        }
+    });
+
+
+    //vid klick visas ENDAST menyn
+    tryAgainBtn.addEventListener("click", () => {
+        failView.style.display = "none";
+        loginView.style.display = "block";
+        usernameInput.value = "";
+        passwordInput.value = "";
+        usernameInput.focus();
+    });
+
+    //vid klick visas ENDAST menyn
+    logoutBtn.addEventListener("click", () => {
+        successView.style.display = "none";
+        loginView.style.display = "block";
+        usernameInput.value = "";
+        passwordInput.value = "";
+        usernameInput.focus();
+    })
    
 })
