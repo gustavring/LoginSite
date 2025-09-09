@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoginSite</title>
+    <link rel="stylesheet" href="login.css">
     <script src="login.js" defer></script>
 </head>
 <body>
     <div id="login">
+        <h1>Ange användarnamn och lösenord:</h1>
         <input type="username" id="usernameInput" placeholder="username">
+
         <input type="password" id="passwordInput" placeholder="password">
+        
+        <label>
+            <input type="checkbox" id="togglePassword">
+            Visa <!-- för att kunna visa vad man skrivit i password -->
+        </label>
+
 
         <button id="loginBtn" type="submit">Logga in</button>
     </div>
 
     <div id="success" style="display: none;"> <!-- Välkomssidan -->
         <h1>Välkommen</h1>
-        <p>Inloggningen lyckades</p>
+        <p>Inloggningen lyckades!</p>
         <button id="logoutBtn">Logga ut</button> <!-- logga ut knapp när man lyckats logga in -->
     </div>
 
     <div id="fail" style="display: none;"> <!-- vid fel inmatning hamnar man här -->
-        <h1>Fel användarnamn eller lösenord</h1>
+        <h1>OBS!</h1>
+        <p>Fel användarnamn och/eller lösenord</p>
         <button id="tryAgainBtn">Försök igen</button> <!-- laddar om sidan vid click och visar menyn igen -->
     </div>
     

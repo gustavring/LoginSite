@@ -18,7 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //hämtar försökigen knappen
     const tryAgainBtn = document.getElementById("tryAgainBtn");
-
+    
+    const logoutBtn = document.getElementById("logoutBtn");
+    
+    const togglePassword = document.getElementById("togglePassword");
+    togglePassword.addEventListener("change", () => {
+        passwordInput.type = togglePassword.checked? "text" : "password";
+    })
+    
+    
     //se så att element hittades
     console.log("element hittades:");
     console.log(loginBtn);
@@ -26,4 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(passwordInput);
     console.log(successView);
     console.log(failView);
+    console.log(logoutBtn);
+    console.log(togglePassword);
+    
+    
+   
 })
