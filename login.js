@@ -1,5 +1,5 @@
 //variabler för rätt username/password
-const correctUsername = "text";
+const correctUsername = "test";
 const correctPassword = "1234";
 
 //väntar på hela html dokumentet innan js körs
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const togglePassword = document.getElementById("togglePassword");
     togglePassword.addEventListener("change", () => {
-        passwordInput.type = togglePassword.checked? "text" : "password";
+        passwordInput.type = togglePassword.checked? "test" : "password";
     })
     
     
